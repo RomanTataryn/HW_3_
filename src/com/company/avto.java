@@ -24,8 +24,7 @@ public class avto {
 
             if (starter == 1) {
                 System.out.println("автомобіль завівся");
-                // } else {
-                //   ("неправильне введення. Введіть 1, якщо хочете завести авто");
+
             }
 
         }
@@ -40,8 +39,9 @@ public class avto {
             Scanner scan = new Scanner(System.in);
             yourspeed = scan.nextInt();
             System.out.println("введена швидкість" + yourspeed);
-
-            System.out.println("ви ввели негативну швидкість, або таку, яка перевищує максимально допустиму");
+            if (yourspeed <= 0 || yourspeed > maxspeed) {
+                System.out.println("ви ввели від'ємну/нульову швидкість або таку, яка перевищує максимально допустиму");
+            }
         }
         while (yourspeed < 0 || yourspeed > maxspeed);
         if (yourspeed > 0 && yourspeed < maxspeed) {
