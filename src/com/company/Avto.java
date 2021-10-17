@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public class avto {
+public class Avto {
 
 
     public static void zavesty_avto() {
@@ -38,12 +38,12 @@ public class avto {
             System.out.println("введіть бажану швидкість ");
             Scanner scan = new Scanner(System.in);
             yourspeed = scan.nextInt();
-            System.out.println("введена швидкість" + yourspeed);
+            System.out.println("введена швидкість " + yourspeed);
             if (yourspeed <= 0 || yourspeed > maxspeed) {
                 System.out.println("ви ввели від'ємну/нульову швидкість або таку, яка перевищує максимально допустиму");
             }
         }
-        while (yourspeed < 0 || yourspeed > maxspeed);
+        while (yourspeed <= 0 || yourspeed > maxspeed);
         if (yourspeed > 0 && yourspeed < maxspeed) {
             do {
                 speed += 10;

@@ -7,9 +7,9 @@ public class Main {
         Circle.Area();
         System.out.println("--------------------------");
         System.out.println("Task 2");
-        avto.zavesty_avto();
-        avto.nabraty_shvydkist();
-        avto.stop();
+        Avto.zavesty_avto();
+        Avto.nabraty_shvydkist();
+        Avto.stop();
         String model;
         double max_speed;
         System.out.println("-------------------------");
