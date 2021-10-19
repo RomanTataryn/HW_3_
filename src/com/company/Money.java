@@ -48,14 +48,13 @@ public class Money {
                 rezult = suma1 - suma2;
                 Long hrn_rez = (long) rezult;
                 byte kop_rez = (byte) Math.round((rezult - hrn_rez) * 100);
-                //    System.out.println("результат віднімання: " + hrn_rez + "," + (kop_rez));
                 if (hrn_rez == 0 && kop_rez < 0) {
                     System.out.print("результат віднімання: -" + hrn_rez + ",");
                 } else
                     System.out.print("результат віднімання: " + hrn_rez + ",");
 
                 if (Math.abs(kop_rez) < 10) {
-                    System.out.println("0" + +Math.abs(kop_rez));
+                    System.out.println("0" + Math.abs(kop_rez));
                 } else
                     System.out.println(Math.abs(kop_rez));
                 break;
@@ -67,8 +66,6 @@ public class Money {
                     rezult = suma1 / chyslo;
                     Long hrn_rez = (long) rezult;
                     byte kop_rez = (byte) Math.round((rezult - hrn_rez) * 100);
-
-                    //   System.out.println("результат ділення: " + hrn_rez + "," + kop_rez);
                     if (kop_rez < 10) {
                         System.out.println("результат ділення : " + hrn_rez + "," + "0" + (kop_rez));
                     } else
