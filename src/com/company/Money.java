@@ -88,8 +88,7 @@ public class Money {
                 } else
                     System.out.println("результат множення: " + hrn_rez + "," + kop_rez);
                 break;
-                // System.out.println("результат множення: " + hrn_rez + "," + kop_rez);
-                //break;
+
             }
             case "?": {
                 System.out.println("введіть кількість гривень: ");
