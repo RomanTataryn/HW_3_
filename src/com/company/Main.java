@@ -10,13 +10,9 @@ public class Main {
         Avto.zavesty_avto();
         Avto.nabraty_shvydkist();
         Avto.stop();
-        String model;
-        double max_speed;
         System.out.println("-------------------------");
         System.out.println("Task 3");
         Money.kalk();
-
     }
-
 
 }

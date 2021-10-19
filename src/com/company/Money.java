@@ -13,11 +13,13 @@ public class Money {
         hrn1 = scan.nextLong();
         System.out.println("введіть кількість копійок: ");
         kop1 = scan.nextByte();
-        suma1 = hrn1 + (double) kop1 / 100;
+        System.out.println(kop1);
+        suma1 = (double) hrn1 + (double) kop1 / 100;
         System.out.println("ваша сума: " + suma1);
         System.out.println("Введіть дію: (+-/*) або " + "?" + " для порівняння чисел");
         Scanner scan1 = new Scanner(System.in);
         diya = scan1.nextLine();
+
         switch (diya) {
             case "+": {
                 System.out.println("введіть кількість гривень: ");
@@ -41,17 +43,22 @@ public class Money {
                 hrn2 = scan.nextLong();
                 System.out.println("введіть кількість копійок: ");
                 kop2 = scan.nextByte();
-                suma2 = hrn2 + (double) kop2 / 100;
+                suma2 = (double) hrn2 + (double) kop2 / 100;
                 System.out.println("сума, яка віднімається: " + suma2);
                 rezult = suma1 - suma2;
                 Long hrn_rez = (long) rezult;
                 byte kop_rez = (byte) Math.round((rezult - hrn_rez) * 100);
-                if (kop_rez < 10) {
-                    System.out.println("результат віднімання: " + hrn_rez + "," + "0" + +Math.abs(kop_rez));
+                //    System.out.println("результат віднімання: " + hrn_rez + "," + (kop_rez));
+                if (hrn_rez == 0 && kop_rez < 0) {
+                    System.out.print("результат віднімання: -" + hrn_rez + ",");
                 } else
-                    System.out.println("результат віднімання: " + hrn_rez + "," + Math.abs(kop_rez));
-                break;
+                    System.out.print("результат віднімання: " + hrn_rez + ",");
 
+                if (Math.abs(kop_rez) < 10) {
+                    System.out.println("0" + +Math.abs(kop_rez));
+                } else
+                    System.out.println(Math.abs(kop_rez));
+                break;
             }
             case "/": {
                 System.out.println("введіть число, на яке треба поділити: ");
@@ -94,10 +101,8 @@ public class Money {
                     System.out.println("сума " + suma1 + "більша " + "від суми " + suma2);
                 } else if (suma1 < suma2) {
                     System.out.println("сума " + suma1 + "менша " + "від суми " + suma2);
-                    ;
                 } else {
                     System.out.println("сума  " + suma1 + "дорівнює " + "сумі " + suma2);
-                    ;
 
                 }
                 break;
